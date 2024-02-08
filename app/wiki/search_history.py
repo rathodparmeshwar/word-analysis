@@ -38,7 +38,7 @@ def save_search_history(topic: str, frequent_words: dict):
             "word_count": len(frequent_words),
             "frequent_words": frequent_words,
         },
-        "request_at": str(datetime.now()),
+        "requested_at": str(datetime.now()),
         "status": "successful",
     }
     # Save the search history to a file
