@@ -13,12 +13,24 @@ Install Dependencies
 ```bash
 poetry install --no-root
 ```
+
+Install test dependencies
+```bash
+poetry install --with test 
+```
+
+lock poetry file(development only)
+```bash
+poetry lock --no-update
+```
+
+
 #### OR - you can use pip package manager
 ```bash
 pip install -r requirements.txt
 ```
 
-#### initialize pre-commit hooks(this for development use only.)
+#### initialize pre-commit hooks(development only)
 ```bash
 pre-commit run --all-files
 ```
