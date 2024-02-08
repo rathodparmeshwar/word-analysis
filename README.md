@@ -95,3 +95,7 @@ http://127.0.0.1:8000/search_history
 http://127.0.0.1:8000/docs
 ```
 
+#### to run tests 
+```bash
+pytest .
+```
