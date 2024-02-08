@@ -43,34 +43,34 @@ uvicorn app.main:app --reload
 ## API Endpoints
 #### word analysis request example
 ```url
-http://127.0.0.1:8000/word_analysis?Artificial intelligence=2022&n=10
+http://127.0.0.1:8000/wiki/word_analysis?topic=Artificial intelligence&n=10
 ```
 #### response example
 ```json
 {
-    "data" : {
-        "topic": "2022",
+    "data": {
+        "topic": "Artificial intelligence",
         "word_count": 10,
         "frequent_words": {
-            "Russian": 47,
-            "Ukraine": 41,
-            "invasion": 29,
-            "election": 27,
-            "September": 25,
-            "held": 24,
-            "Russia": 23,
-            "Prime": 22,
-            "Minister": 22,
-            "United": 22
+            "AI": 161,
+            "intelligence": 59,
+            "learning": 52,
+            "used": 44,
+            "artificial": 35,
+            "machine": 35,
+            "human": 33,
+            "use": 30,
+            "problems": 29,
+            "research": 28
         }
     },
-    "requested_at": "2024-02-08 01:45:28.073141",
+    "request_at": "2024-02-08 13:19:03.749992",
     "status": "successful"
 }
 ```
 #### search history request example
 ```url
-http://127.0.0.1:8000/search_history
+http://127.0.0.1:8000/wiki/search_history
 ```
 ```json
 [
