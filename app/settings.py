@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "Words Analysis API"
+    PROJECT_NAME: str = "Word Analysis API"
     PROJECT_VERSION: str = "1.0.0"
 
     WIKIPEDIA_API_URL: str = "https://en.wikipedia.org/w/api.php"
