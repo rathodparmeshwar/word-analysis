@@ -32,7 +32,7 @@ class NltkBasedStopWords:
         return filtered_stop_words
 
 
-class WikipediaWordAnalyser(NltkBasedStopWords):
+class WikiWordFrequencyAnalyser(NltkBasedStopWords):
     def __init__(
         self,
     ) -> None:

@@ -1,8 +1,8 @@
 import pytest
 
-from app.wiki.analyse_words import WikipediaWordAnalyser
+from app.wiki.frequent_words import WikiWordFrequencyAnalyser
 
-wiki_analyser = WikipediaWordAnalyser()
+wiki_analyser = WikiWordFrequencyAnalyser()
 
 
 @pytest.mark.parametrize(

@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException, Query
 
-from app.wiki.analyse_words import WikipediaWordAnalyser
+from app.wiki.frequent_words import WikiWordFrequencyAnalyser
 from app.wiki.search_history import (
     check_search_history,
     get_search_history,
     save_search_history,
 )
 
-wiki_analyser = WikipediaWordAnalyser()
+wiki_analyser = WikiWordFrequencyAnalyser()
 
 router = APIRouter(prefix="/wiki")
 
@@ -28,7 +28,7 @@ def get_wiki_frequent_words(topic: str, n: int = Query(10, gt=0, lt=100)):
         result = wiki_analyser.no_articles_found(topic)
         raise HTTPException(status_code=404, detail=result)
 
-    # fetch content from the wikimedia api this is a fast proceess 
+    # fetch content from the wikimedia api this is a fast process 
     # than usign beautiful soup to scrape the content
     content = wiki_analyser.fetch_article_content(topic)
     
