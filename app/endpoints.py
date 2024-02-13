@@ -29,7 +29,7 @@ def get_wiki_frequent_words(topic: str, n: int = Query(10, gt=0, lt=100)):
         raise HTTPException(status_code=404, detail=result)
 
     # fetch content from the wikimedia api this is a fast process 
-    # than usign beautiful soup to scrape the content
+    # than using beautiful soup to scrape the content
     content = wiki_analyser.fetch_article_content(topic)
     
     # get the top n frequent words from the content
@@ -47,5 +47,5 @@ def search_history():
     # fetch all the search history from the json file
     # we have set a limit to the number of records to be stored 
     # in settings file.
-    search_history = get_search_history()
-    return search_history
+    history = get_search_history()
+    return history

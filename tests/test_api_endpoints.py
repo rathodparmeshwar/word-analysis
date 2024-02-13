@@ -117,7 +117,7 @@ def test_article_with_alpha_numeric(client):
     assert json_response["status"] == "successful"
 
 
-def test_search_histroy(client):
+def test_search_history(client):
     response = client.get(f"{SEARCH_HISTORY_URL}")
     json_response = response.json()
     assert isinstance(json_response, list)
